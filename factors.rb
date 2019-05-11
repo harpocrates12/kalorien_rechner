@@ -2,7 +2,7 @@
 
 # Holds male/female factors for metabolism calculation
 class Factors
-  def male
+  def self.male
     OpenStruct.new(
       {
         base_factor: 66.47,
@@ -13,7 +13,7 @@ class Factors
     )
   end
 
-  def female
+  def self.female
     OpenStruct.new(
       {
         base_factor: 655.1,
@@ -24,9 +24,7 @@ class Factors
     )
   end
 
-  private
-
-  def activity_factors
+  def self.activity_factors
     {
       hours_sleeping: 0.95,
       hours_sitting_low: 1.2,

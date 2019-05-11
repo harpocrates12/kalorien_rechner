@@ -52,8 +52,11 @@ class CalculateCaloricMetabolism
   # rubocop:enable Metrics/MethodLength
 
   def calculate_caloric_requirement(basal_metabolism, hours_per_activity_level)
-    hours_per_activity_level.map do |key, val|
-      val * (basal_metabolism * @factors.send(key))
-    end.sum / 24.0
+    weighted_caloric_requirements =
+      hours_per_activity_level.map do |key, val|
+        val * (basal_metabolism * @factors.send(key))
+      end.sum
+
+    (weighted_caloric_requirements / 24.0).round(2)
   end
 end
