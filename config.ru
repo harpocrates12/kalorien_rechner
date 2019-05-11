@@ -1,3 +1,3 @@
 # config.ru
-require './server'
+require './server.rb'
 run Server
