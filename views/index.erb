@@ -9,6 +9,12 @@
   <hr>
   <div>
     <form method='POST'>
+      <label>Geschlecht</label><br>
+      <select name="gender">
+        <option value="male">Männlich</option>
+        <option value="female">Weiblich</option>
+      </select><br>
+      <br>
       <label>Alter (Jahre)</label><br>
       <input name='age_in_years' type="text"><br>
       <label>Gewicht (Kg)</label><br>
@@ -16,20 +22,13 @@
       <label>Körpergröße (Cm)</label><br>
       <input name='height_in_cm' type="text"><br>
       <br>
-      <label>Geschlecht</label><br>
-      <select name="gender">
-        <option value="male">Männlich</option>
-        <option value="female">Weiblich</option>
-      </select><br>
-      <br>
       <label>Stunden pro Aktivitätslevel (pro Tag)</label>
         <p><input name="hours_sleeping" placeholder="Schlafend" type="text"></p>
         <p><input name="hours_sitting_low" placeholder="Liegend" type="text"></p>
-        <p><input name="hours_sitting_middle" placeholder="Sitzend und liegend" type="text"></p>
-        <p><input name="hours_sitting_high" placeholder="Sitzend und stehend" type="text"></p>
+        <p><input name="hours_sitting_middle" placeholder="Sitzend & liegend" type="text"></p>
+        <p><input name="hours_sitting_high" placeholder="Sitzend & stehend" type="text"></p>
         <p><input name="hours_standing" placeholder="Stehend" type="text"></p>
         <p><input name="hours_exerting" placeholder="Anstrengung/Sport" type="text"></p>
-      <br>
       <input type="submit" value='Berechnen'>
     </form>
   </div>
