@@ -6,7 +6,7 @@ require 'bundler'
 Bundler.require
 
 # defines the servers' available routes
-class Server < Sinatra :Base
+class Server < Sinatra::Base
   get '/index' do
     erb :index
   end
